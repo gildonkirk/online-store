@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Roger Kirk Art</title>
+  </head>
+  <body>
+    <div class="availableItems">
+      <h1 class="sectionHeader">Available Items</h1>
+      <ul class="availableItemsList">
+        <li class="listItem unClicked">Item 1: $<span class="itemPrice">30</span></li>
+        <li class="listItem unClicked">Item 2: $<span class="itemPrice">25</span></li>
+        <li class="listItem unClicked">Item 3: $<span class="itemPrice">15</span></li>
+      </ul>
+    </div>
+    <div class="shoppingCart">
+      <h1 class="sectionHeader">Shopping Cart</h1>
+      <ul class="chosenItems">
+      </ul>
+      <div id="paypal-button"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js">
+    </script>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
