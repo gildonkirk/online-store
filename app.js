@@ -46,7 +46,7 @@ paypal.Button.render({
 function addToCart() {
   $(document).on('click', '.listItem', function() {
     const newItem = $(event.target);
-    console.log(newItem.text());
+    console.log(newItem.parent().children('p').text());
     $('.chosenItems').append($(this));
     $(this).addClass('cartItem');
     if($('.cartItem').length === 1) {
