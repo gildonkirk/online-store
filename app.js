@@ -49,6 +49,7 @@ function addToCart() {
     console.log(newItem.parent().children('p').text());
     let newItemPrice = newItem.parent().children('p').text();
     newItemPrice = newItemPrice.replace('$', '');
+    newItemPrice = parseInt(newItemPrice);
     console.log(newItemPrice);
     $('.chosenItems').append($(this));
     $(this).addClass('cartItem');
