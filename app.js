@@ -45,9 +45,10 @@ paypal.Button.render({
 
 function addToCart() {
   $(document).on('click', '.listItem', function() {
+    const newItem = $(event.target);
+    console.log(newItem.text());
     $('.chosenItems').append($(this));
     $(this).addClass('cartItem');
-    console.log($('.cartItem').length);
     if($('.cartItem').length === 1) {
       console.log('add button');
       $('.shoppingCart').append('<button type="button" name="checkout">Checkout</button>');
