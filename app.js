@@ -47,6 +47,9 @@ function addToCart() {
   $(document).on('click', '.listItem', function() {
     const newItem = $(event.target);
     console.log(newItem.parent().children('p').text());
+    let newItemPrice = newItem.parent().children('p').text();
+    newItemPrice = newItemPrice.replace('$', '');
+    console.log(newItemPrice);
     $('.chosenItems').append($(this));
     $(this).addClass('cartItem');
     if($('.cartItem').length === 1) {
