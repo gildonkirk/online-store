@@ -9,10 +9,6 @@ function addToCart() {
     console.log(newItemPrice);
     $('.chosenItems').append($(this));
     $(this).addClass('cartItem');
-    if($('.cartItem').length === 1) {
-      console.log('add button');
-      $('.shoppingCart').append('<button type="button" name="checkout">Checkout</button>');
-    };
 
     paypal.Button.render({
       // Configure environment
@@ -57,5 +53,6 @@ function addToCart() {
         });
       }
     }, '#paypal-button');
+
   });
 };
